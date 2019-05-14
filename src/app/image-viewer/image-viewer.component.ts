@@ -51,6 +51,12 @@ export class ImageViewerComponent implements OnInit {
 
   @Output()
   customEvent: EventEmitter<CustomEvent> = new EventEmitter();
+  
+  @Output()
+  zoomIn: EventEmitter = new EventEmitter();
+  
+  @Output()
+  zoomOut: EventEmitter = new EventEmitter();
 
   public style = { transform: '', msTransform: '', oTransform: '', webkitTransform: '' };
   public fullscreen = false;
@@ -94,6 +100,7 @@ export class ImageViewerComponent implements OnInit {
   zoomIn() {
     this.scale *= (1 + this.config.zoomFactor);
     this.updateStyle();
+    this.zoomIn.emit();
   }
 
   zoomOut() {
@@ -101,6 +108,7 @@ export class ImageViewerComponent implements OnInit {
       this.scale /= (1 + this.config.zoomFactor);
     }
     this.updateStyle();
+    this.zoomOut.emit();
   }
 
   scrollZoom(evt) {
