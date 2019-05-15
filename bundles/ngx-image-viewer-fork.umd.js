@@ -1,7 +1,7 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('screenfull')) :
 	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/common', 'screenfull'], factory) :
-	(factory((global['ngx-image-viewer'] = {}),global.ng.core,global.ng.common,global.screenfull));
+	(factory((global['ngx-image-viewer-fork'] = {}),global.ng.core,global.ng.common,global.screenfull));
 }(this, (function (exports,core,common,screenfull) { 'use strict';
 
 var CustomEvent = (function () {
@@ -357,4 +357,4 @@ exports.ɵa = ToggleFullscreenDirective;
 Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
-//# sourceMappingURL=ngx-image-viewer.umd.js.map
+//# sourceMappingURL=ngx-image-viewer-fork.umd.js.map
